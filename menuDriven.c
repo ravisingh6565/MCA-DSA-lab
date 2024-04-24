@@ -25,7 +25,7 @@ void multiplyMatrix(int A[2][2], int B[2][2]) {
             }
         }
     }
-    printf("Result of multiplication:\n");
+    printf("Result of multiplicationdgdgdg:\n");
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             printf("%d ", result[i][j]);
