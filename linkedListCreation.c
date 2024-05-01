@@ -25,26 +25,35 @@ struct node{
     
     }
 
-void insertBychoise(struct node* ptr ,int pos){
+struct node* insertBychoise(struct node* ptr ,int pos){
     struct node* start = ptr;
+    if(pos==1){
+        struct node *newhead= (struct node*)malloc(sizeof(struct node));
+        newhead = insertAtBegining(ptr);
+        return newhead;
+    }
     while(pos>0){
-            if(ptr==NULL){
+            if(ptr==NULL || pos >0){
                 break;
             }
             ptr=ptr->next;
             pos--;
             
     }
-    if(pos>0) printf("the length of the string is much shorter%d",pos);
+    if(pos<=0) printf("the length of the string is much shorter%d",pos);
     else {
         int n ;
         printf("enter the the number you want to enter");
         scanf("%d",&n);
         struct node* newNode=(struct node*)malloc(sizeof(struct node));
+        newNode->next= ptr->next;
         ptr->next = newNode;
-        newNode->next = NULL;
         newNode->data = n;
+        // ptr->next = newNode;
+        // newNode->next = NULL;
+        // newNode->data = n;
     }
+    return start;
 }
 
 int main(){
@@ -74,7 +83,7 @@ int main(){
     int n;
     printf("Enter the position: ");
     scanf("%d",&n);
-    insertBychoise(head,n);
+     head = insertBychoise(head,n);
         linkedListTraversal(head);
         // check(fourth);
 
