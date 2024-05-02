@@ -13,7 +13,7 @@ struct node{
 
     struct node* insertAtBegining(struct node* ptr){
     if(ptr==NULL){
-        printf("linkedList is empty");
+        printf("linkedList is emptyyy");
         return ptr;
     }else{
 
