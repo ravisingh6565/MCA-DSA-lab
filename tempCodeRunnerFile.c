@@ -1,3 +1,4 @@
-  // printf("Enter the position: ");
-    // scanf("%d",&n);
-    //     insertBychoise(head,n);
+ if(head->next== NULL)
+//   printf("correct");
+//   else 
+//   printf("not correct");
